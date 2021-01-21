@@ -1,0 +1,69 @@
+@import '../../assets/scss/setup/variables';
+@import '../../assets/scss/setup/mixins';
+
+.recipe-app {
+    .filter {
+        font-family: YuseiMagic-regular;
+        margin-bottom: 25px;
+        background-color: $clr2;
+        padding: 10px 20px;
+        border-radius: 5px;
+
+        // position: sticky;
+        // top: 65px;
+        & .nav-btns {
+            >* {
+                font-size: 20px;
+                border-radius: 32px;
+                color: rgb(34, 34, 34);
+                height: 40px;
+                width: 120px;
+                background-color: rgb(255, 255, 255);
+                padding: 5px 10px;
+                margin: 5px;
+                border: none;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px,
+                    rgba(0, 0, 0, 0.1) 0px 3px 8px;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 0.5s;
+                    background-color: $clr3;
+                }
+
+                &:focus {
+                    outline: 0;
+                }
+            }
+            @include for-mobile-layout {
+                display: none;
+            }
+        }
+        
+        & .nav-btns-mobile {
+            display: none;
+            @include for-mobile-layout {
+                display: block;
+            }
+        }
+
+    }
+
+    .add-btn {
+        // position: fixed;
+        // top: 90px;
+        // left: 25px;
+        position: fixed;
+        top: 580px;
+        right: 0;
+        margin-right: 5%
+    }
+
+    & h1 {
+        margin-bottom: 10px;
+    }
+
+    .css-2b097c-container {
+        width: 150px;
+    }
+}

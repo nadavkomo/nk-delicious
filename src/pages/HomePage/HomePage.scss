@@ -1,0 +1,121 @@
+@import '../../assets/scss/setup/variables';
+@import '../../assets/scss/setup/mixins';
+
+.home-page {
+    & .img-container {
+        position: relative;
+        height: 450px;
+        margin-bottom: 10px;
+        width: 100%;
+        background-image:
+            linear-gradient(rgba(59, 59, 59, 0.2),
+                rgba(59, 59, 59, 0.5)),
+            url(../../assets/imgs/hero.jpg);
+        background-size: cover;
+        // background-position: initial;
+
+        background-position: bottom;
+        // @include for-tablet-layout {
+        //     background-position: bottom;
+        // }
+
+        & img {
+            height: 100%;
+            object-fit: cover
+        }
+
+        & .contant {
+            font-family: YuseiMagic-regular;
+            margin: 100px auto;
+            font-size: 24px;
+
+            & form {
+                align-items: center;
+                position: relative;
+                border: 1px solid rgb(221, 221, 221);
+                border-radius: 32px;
+                color: rgb(34, 34, 34);
+                height: 66px;
+                min-width: 450px;
+
+                @include for-tablet-layout {
+                    min-width: 250px;
+                }
+
+                margin: 5px 15px;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px,
+                rgba(0, 0, 0, 0.1) 0px 3px 8px;
+                --big-search-form-background: #FFFFFF;
+                background-color: rgb(255, 255, 255);
+
+                & input {
+                    font-size: 24px;
+                    border-radius: 32px;
+                    color: rgb(34, 34, 34);
+                    height: 66px;
+                    width: 100%;
+                    background-color: rgb(255, 255, 255);
+                    margin: 0 65px 0 10px;
+                    border: none;
+                }
+
+                & img {
+                    position: absolute;
+                    right: 0;
+                    margin: 15px;
+                    border-radius: 50px;
+                    height: 47px;
+                    width: 47px;
+                    border: 1px solid #dddddd;
+                    background-color: rgb(255, 255, 255);
+                    object-fit: scale-down;
+
+                    &:hover {
+                        cursor: pointer;
+                        transition: 0.5s;
+                        background-color: $clr2;
+                    }
+                }
+            }
+
+            & .nav-btns {
+                >* {
+                    font-size: 20px;
+                    border-radius: 32px;
+                    color: rgb(34, 34, 34);
+                    height: 40px;
+                    width: 150px;
+                    background-color: rgb(255, 255, 255);
+                    padding: 5px 10px;
+                    margin: 5px;
+                    border: none;
+
+                    &:hover {
+                        cursor: pointer;
+                        transition: 0.5s;
+                        background-color: $clr2;
+                    }
+
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    & .previews {
+        width: 100%;
+
+        & .nav-contant {
+            width: 100%;
+            padding: 0 40px;
+        }
+    }
+
+    & .recipe-preview {
+        margin: 20px;
+    }
+
+
+}

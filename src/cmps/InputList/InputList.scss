@@ -1,0 +1,7 @@
+.input-list {
+    & .item {
+        & input[type="text" i] {
+            width: 250px;
+        }
+    }
+}

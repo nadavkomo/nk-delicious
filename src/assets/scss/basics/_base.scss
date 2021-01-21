@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    // font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: popins-regular;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: $clr3;
+    color: $clr1;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-weight: normal;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    * {
+        pointer-events: none;
+    }
+}
+
+input {
+    font-family: inherit;
+    text-align: inherit;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color:unset;
+    border: unset;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: $clr1;
+    font-size: rem(16px);
+    &:hover {
+        background-color: $clr2;
+        transition: 0.3s;
+    }
+}
+
+.btn:focus,
+a:focus,
+input:focus {
+    outline: 0;
+}
+
+// MAC like scrollbar
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+    -webkit-border-radius: 100px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

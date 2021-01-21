@@ -1,0 +1,24 @@
+.recipe-edit {
+    margin: 15px 0;
+    .btns {
+        .back-btn {
+            border: unset;
+            background-color: unset;
+        }
+        margin-top: 10px;
+    }
+    & form {
+        &>* {
+            margin-bottom: 10px;
+        }
+        & .err-msg {
+            transition: .9;
+        }
+        & .recipe-img {
+            width: 300px;
+        }
+        & .save-btn {
+            width: 60px;
+        }
+    }
+}

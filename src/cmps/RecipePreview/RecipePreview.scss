@@ -1,0 +1,21 @@
+.recipe-preview {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 250px;
+    height: 400px;
+    &>* {
+        margin-bottom: 10px;
+    }
+    & .title-container {
+        height: 70px;
+    }
+    & .recipe-img-container {
+        height: 250px;
+        & img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,171 @@
+@import '../../assets/scss/setup/_variables.scss';
+@import '../../assets/scss/setup/_mixins.scss';
+@import '../../assets/scss/setup/functions';
+
+.recipe-details {
+    .btns {
+        width: 100%;
+
+        &>* {
+            width: 50px;
+        }
+    }
+
+    & .contant {
+        @include for-tablet-layout {
+            flex-direction: column-reverse;
+        }
+
+        & .chat-app-desktop {
+            display: block;
+
+            @include for-tablet-layout {
+                display: none;
+            }
+        }
+    }
+
+    & .recipe-img {
+        object-fit: cover;
+        width: 250px;
+        height: 250px;
+        @include for-tablet-layout {
+            max-width: 400px;
+            min-width: 350px;
+            max-height: 400px;
+            min-height: 250px;
+        }
+    }
+
+    &>* {
+        margin-bottom: 10px;
+    }
+
+    & .extra-details {
+        flex-direction: column-reverse;
+
+        & .tags {
+            & .tag {
+                margin: 5px;
+                padding: 5px 10px;
+                border-radius: 50px;
+                border: 1px solid $clr1;
+                background-color: $clr2;
+            }
+        }
+
+        & .recipe-list {
+            margin: 0 0 15px;
+        }
+
+        & .summary-item-wrapper {
+            max-width: 400px;
+
+            &>*:not(:last-child) {
+                border-right: 1px solid;
+            }
+
+            & .recipe-summery-item {
+                padding: 5px;
+                flex: 1;
+
+                &>* {
+                    padding: 5px;
+
+                    &:first-child {
+                        font-size: 22px;
+                    }
+
+                    &:last-child {
+                        font-size: 16px;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    & .chat-app {
+        & .title-chat {
+            margin-bottom: 5px;
+        }
+
+        & main {
+            max-height: 250px;
+            overflow: overlay;
+        }
+
+        & .mainChat {
+            text-align: start;
+            padding: rem(5px) 0;
+
+            &:nth-child(odd) {
+                background-color: gainsboro;
+            }
+        }
+
+        & footer {
+            & .el-input {
+                margin-right: rem(5px);
+            }
+        }
+    }
+
+    & .funcs {
+        width: 100%;
+
+        & .chat-app-mobile {
+            display: none;
+
+            @include for-tablet-layout {
+                display: block;
+            }
+        }
+    }
+
+    & .reviews {
+        width: 100%;
+
+        & .reviews-container {
+            width: 100%;
+
+            & .add-review {
+                width: 200px;
+                border-radius: 3px;
+                padding: 0 3px;
+                margin: 5px;
+                & form {
+                    &>* {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            & .default-review-list {
+                width: 100%;
+                & h1 {
+                    font-size: 28px;
+                }
+            }
+
+            & .review-list {
+                flex: 1;
+                max-width: 100%;
+
+                & .review {
+                    margin: 5px;
+                    padding: 5px;
+                    border-radius: 3px;
+                    background-color: $clr2;
+                    width: 250px;
+                    height: fit-content;
+                    & .review-txt {
+                        font-size: rem(14px);
+                    }
+                }
+            }
+        }
+    }
+}

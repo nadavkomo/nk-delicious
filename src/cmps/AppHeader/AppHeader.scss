@@ -1,0 +1,97 @@
+@import '../../assets/scss/setup/variables';
+@import '../../assets/scss/setup/mixins';
+
+.app-header {
+    position: sticky;
+    top: 0;
+    background-color: $clr2;
+    padding: 0 28px;
+    color: $clr1;
+    z-index: 1;
+
+    & .main-nav-mobile {
+        display: none;
+        @include for-mobile-layout {
+            display: block;
+        }
+        & .el-dropdown-menu {
+            width: 125px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        & .el-icon-caret-bottom {
+            color: $clr1;
+        }
+    }
+
+    & .main-nav {
+        @include for-mobile-layout {
+            display: none;
+        }
+        a {
+            padding: 20px 10px;
+            text-align: center;
+            color: $clr4;
+
+            &.active {
+                color: $clr1;
+            }
+
+            &:hover {
+                color: $clr1;
+            }
+        }
+    }
+
+    .logo {
+        color: $clr1;
+        text-transform: uppercase;
+        font-family: YuseiMagic-regular;
+        margin-left: 12px;
+        font-size: 21px;
+    }
+
+    & form {
+        align-items: center;
+        position: relative;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 32px;
+        color: rgb(34, 34, 34);
+        margin-left: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px,
+            rgba(0, 0, 0, 0.1) 0px 3px 8px;
+        --big-search-form-background: #FFFFFF;
+        background-color: rgb(255, 255, 255);
+
+        & input {
+            font-size: 20px;
+            border-radius: 32px;
+            color: #222222;
+            background-color: white;
+            padding: 0 45px 0 10px;
+            border: none;
+            text-align: center;
+            @include for-mobile-layout {
+                max-width: 150px;
+            }
+        }
+
+        & img {
+            position: absolute;
+            right: 0;
+            margin: 10px;
+            border-radius: 50px;
+            height: 28px;
+            width: 28px;
+            border: unset;
+            background-color: #ffffff;
+            object-fit: scale-down;
+
+            &:hover {
+                cursor: pointer;
+                transition: 0.5s;
+                background-color: $clr2;
+            }
+        }
+    }
+}
